@@ -6,8 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'puce':'#d11d03',
-      }
+        'puce':'#cc8899',
+      },
+      fontFamily: {
+        'main': "'Josefin Sans', sans-serif",
+      },
+      fontSize: {
+        'massive': '14rem',
+      },
     },
   },  
   variants: {
