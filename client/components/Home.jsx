@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function Home () {
     const [welcome, setWelcome] = useState('Hey Grrrl.')
@@ -11,8 +11,15 @@ function Home () {
         setWelcome('Hey Sugar.')
     }
 
+    useEffect(() => {
+    const interval = setInterval(() => {
+        setWelcome('Portfolio.')
+        }, 1000)
+        return () => clearInterval(interval)
+    }, [])
+
     return (  
-        <section className="w-full bg-green-200">
+        <section className="bg-green-200 p-8 border-black m-8 border-8">
             <h1 className='text-puce text-massive font-main' onMouseOver={handleMean} onMouseLeave={handleNice}>{welcome}</h1>
         </section>
     )
